@@ -7,6 +7,7 @@ using UnityEngine;
 public class MovePlayer : MonoBehaviour
 {
     public float speed = 2;
+    public float rotSpeed = 200;
     float xRot;
     float yRot;
 
@@ -57,8 +58,8 @@ public class MovePlayer : MonoBehaviour
 
         print($"MouseX: {mouseX}, MouseY: {mouseY}"); 
 
-        xRot += mouseX;
-        yRot += mouseY;
+        xRot += mouseX * rotSpeed * Time.deltaTime;
+        yRot += mouseY * rotSpeed * Time.deltaTime; // 스피드 곱해서 마우스 회전 속도 UP
 
         transform.rotation = Quaternion.Euler(-yRot, xRot, 0);
 
