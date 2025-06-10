@@ -61,6 +61,9 @@ public class MovePlayer : MonoBehaviour
         xRot += mouseX * rotSpeed * Time.deltaTime;
         yRot += mouseY * rotSpeed * Time.deltaTime; // 스피드 곱해서 마우스 회전 속도 UP
 
+        // -90 ~ 90 까지만 회전 고정
+        yRot = Mathf.Clamp( yRot, -90, 90 );
+
         transform.rotation = Quaternion.Euler(-yRot, xRot, 0);
 
     }
