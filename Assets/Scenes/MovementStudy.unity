@@ -310,6 +310,7 @@ MonoBehaviour:
   speed: 3
   cylinderA: {fileID: 1277531443}
   cylinderB: {fileID: 1913699595}
+  isCylinderA: 0
 --- !u!65 &257790310
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3415,7 +3416,6 @@ GameObject:
   - component: {fileID: 1695988451}
   - component: {fileID: 1695988450}
   - component: {fileID: 1695988449}
-  - component: {fileID: 1695988448}
   - component: {fileID: 1695988447}
   m_Layer: 0
   m_Name: Cube
@@ -3451,23 +3451,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 646d72b1b30fc5341b8f9c63c7e2b12b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0
-  targets: []
---- !u!114 &1695988448
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1695988445}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe3493e671a9cb34494c714148c740b3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 3
-  cylinderA: {fileID: 340938869}
-  cylinderB: {fileID: 1427263051}
+  speed: 10
+  targets:
+  - {fileID: 340938869}
+  - {fileID: 1427263051}
+  - {fileID: 845218725}
+  - {fileID: 1660001652}
 --- !u!65 &1695988449
 BoxCollider:
   m_ObjectHideFlags: 0
